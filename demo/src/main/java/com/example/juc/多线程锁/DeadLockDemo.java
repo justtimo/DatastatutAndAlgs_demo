@@ -1,11 +1,14 @@
 package com.example.juc.多线程锁;
 
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.LockSupport;
 
 public class DeadLockDemo {
     private static final Object o1 = new Object();
     private static final Object o2 = new Object();
     public static void main(String[] args) {
+        LockSupport.park();
+
         new Thread(
                 ()->{
                     synchronized (o1) {

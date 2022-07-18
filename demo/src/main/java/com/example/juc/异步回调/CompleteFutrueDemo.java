@@ -26,5 +26,6 @@ public class CompleteFutrueDemo {
                     System.out.println(b);
                 }
         ).get();
+
     }
 }

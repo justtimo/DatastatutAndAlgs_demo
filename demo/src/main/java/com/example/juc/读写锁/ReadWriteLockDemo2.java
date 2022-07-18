@@ -13,6 +13,8 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  */
 public class ReadWriteLockDemo2 {
     public static void main(String[] args) {
+        ReentrantLock lock = new ReentrantLock();
+        lock.lock();
         ReentrantReadWriteLock rwLock = new ReentrantReadWriteLock();
         ReentrantReadWriteLock.ReadLock readLock = rwLock.readLock();
         ReentrantReadWriteLock.WriteLock writeLock = rwLock.writeLock();
